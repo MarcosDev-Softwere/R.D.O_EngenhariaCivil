@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R.D.O Digital - 12/02/26</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🚧 R.D.O - 12/02/26 (Quinta-Feira)</h1>
+            <div class="search-container">
+                <input type="text" id="inputBusca" placeholder="🔍 Buscar por nome, função ou atividade..." onkeyup="filtrarRDO()">
+            </div>
+        </header>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Função / Nome</th>
+                        <th>Atividade Matutino</th>
+                        <th>Status Mat.</th>
+                        <th>Atividade Vespertino</th>
+                        <th>Clima Manhã</th>
+                        <th>Clima Tarde</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaCorpo">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>

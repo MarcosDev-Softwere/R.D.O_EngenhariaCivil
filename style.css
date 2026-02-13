@@ -1,0 +1,150 @@
+/* =========================================
+   RESET E BASE (Estilo Documento Técnico)
+   ========================================= */
+body {
+    font-family: 'Arial', sans-serif; /* Fonte técnica padrão */
+    background-color: #e9e9e9; /* Fundo cinza apenas fora da folha */
+    margin: 0;
+    padding: 20px;
+    color: #000; /* Texto Preto Absoluto */
+}
+
+/* Container imita uma folha de papel A4/Ofício */
+.container {
+    background: white;
+    max-width: 1200px;       /* Trava largura em telas grandes */
+    margin: 0 auto;          /* Centraliza */
+    padding: 25px;
+    border: 1px solid #000;  /* Borda fina para delimitar a folha */
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+}
+
+/* =========================================
+   CABEÇALHO E BUSCA (Monocromático)
+   ========================================= */
+header h1 {
+    text-transform: uppercase;
+    border-bottom: 3px solid #000; /* Linha grossa preta */
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #000; /* Borda preta sólida */
+    border-radius: 0;       /* Cantos quadrados (sério) */
+    font-size: 16px;        /* Evita zoom no iPhone */
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #000;
+}
+
+.search-container input::placeholder {
+    color: #555;
+    font-style: italic;
+}
+
+/* =========================================
+   TABELA ESTILO EXCEL (O Coração do RDO)
+   ========================================= */
+/* Wrapper para permitir rolagem horizontal no celular */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;  /* Permite rolar a tabela de lado */
+    border: 2px solid #000; /* Borda grossa externa da tabela */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Grudado igual Excel */
+    min-width: 800px; /* Força a largura para não espremer os dados */
+}
+
+/* Cabeçalho da Tabela */
+thead th {
+    background-color: #000; /* Fundo Preto */
+    color: #fff;            /* Texto Branco */
+    text-transform: uppercase;
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #fff; /* Divisórias brancas sutis no cabeçalho */
+    font-size: 0.9rem;
+    white-space: nowrap;    /* Não quebra linha no título */
+}
+
+/* Corpo da Tabela */
+tbody td {
+    padding: 8px 10px;
+    border: 1px solid #000; /* Grades pretas do Excel */
+    font-size: 0.95rem;
+    vertical-align: middle;
+}
+
+/* Linhas Zebradas em tons de Cinza (Melhora leitura sem usar cor) */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2; 
+}
+
+/* Hover simples para destacar a linha */
+tbody tr:hover {
+    background-color: #ddd; 
+    cursor: default;
+}
+
+/* Status e Alinhamentos */
+.status-ok {
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.text-center { text-align: center; }
+
+
+/* =========================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+   Adapta o layout sem perder a identidade visual
+   ========================================= */
+
+/* Tablets e Laptops Menores */
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+}
+
+/* Celulares (Modo Compacto) */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 0; /* Remove margem do corpo */
+        background-color: #fff;
+    }
+
+    .container {
+        width: 100%;
+        border: none; /* Remove borda da folha no celular */
+        box-shadow: none;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.2rem; /* Título menor */
+        text-align: center;
+    }
+
+    /* Ajuste da tabela para toque */
+    tbody td {
+        padding: 12px 8px; /* Mais altura para o dedo acertar */
+        font-size: 0.85rem;
+    }
+    
+    /* A primeira coluna (Nome) fica fixa ou destacada */
+    td:first-child {
+        font-weight: bold;
+        background-color: #e0e0e0; /* Destaque cinza para o nome */
+    }
+}
