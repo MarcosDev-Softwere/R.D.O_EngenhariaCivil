@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br"> <!-- Declares the document language as Brazilian Portuguese -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R.D.O Digital - 12/02/26</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8"> <!-- Ensures proper character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes layout responsive on mobile devices -->
+    <title>R.D.O Digital - 12/02/26</title> <!-- Page title shown in browser tab -->
+    <link rel="stylesheet" href="style.css"> <!-- External CSS file for styling -->
 </head>
 <body>
 
-    <div class="container">
+    <div class="container"> <!-- Main container for page layout -->
         <header>
-            <h1>🚧 R.D.O - 12/02/26 (Quinta-Feira)</h1>
+            <h1>🚧 R.D.O - 12/02/26 (Quinta-Feira)</h1> <!-- Main header with date and day -->
             <div class="search-container">
+                <!-- Search input to filter table content dynamically -->
                 <input type="text" id="inputBusca" placeholder="🔍 Buscar por nome, função ou atividade..." onkeyup="filtrarRDO()">
             </div>
         </header>
 
-        <div class="table-wrapper">
+        <div class="table-wrapper"> <!-- Wrapper for table to allow styling and scrolling -->
             <table>
                 <thead>
                     <tr>
+                        <!-- Table headers for daily report -->
                         <th>Função / Nome</th>
                         <th>Atividade Matutino</th>
                         <th>Status Mat.</th>
@@ -29,11 +31,13 @@
                     </tr>
                 </thead>
                 <tbody id="tabelaCorpo">
-                    </tbody>
+                    <!-- Table body will be populated dynamically via JavaScript -->
+                </tbody>
             </table>
         </div>
     </div>
 
+    <!-- External JavaScript file controlling logic (filtering, dynamic table population) -->
     <script src="./index.js"></script>
 </body>
 </html>
