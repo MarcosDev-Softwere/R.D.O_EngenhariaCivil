@@ -23,9 +23,9 @@ It allows construction teams to record daily activities, track worker roles, mon
 - **GitHub Pages** → Hosting and deployment.
 
 RDO_EngenhariaCivil/
-│── index.html      # Main interface (table, search input)
-│── index.js        # Application logic (filtering, dynamic table population)
-│── estilo.css      # Styling and layout
+- ** index.html      # Main interface (table, search input)
+- ** index.js        # Application logic (filtering, dynamic table population)
+- ** estilo.css      # Styling and layout
 
 
 ---
